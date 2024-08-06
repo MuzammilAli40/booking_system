@@ -1,0 +1,316 @@
+<x-guest-layout>
+    <section class="container-fluid px-lg-5 py-4 px-md-3 px-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-uppercase">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('shop') }}" class="text-uppercase">Shop</a></li>
+                <li class="breadcrumb-item">
+                    <a href="{{ route('orderkitchen') }}" class="text-uppercase">
+                        Order Kitchen
+                    </a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="row mb-lg-5 mb-4">
+            <div class="col-12">
+                <h1 class="fs-1 fw-bolder text-dark text-uppercase">{{ $category->name }}</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-4 bg-light p-3 pb-4">
+                <div class="">
+                    <h4 style="font-weight: 600; font-size: 1.3rem">Filters</h4>
+                    <p><b>CURRENT ITEMS: </b><span>788</span></p>
+                </div>
+                <form action="">
+                    <fieldset class="border border-dark border-1 rounded-1 p-2">
+                        <legend class="float-none w-auto px-1 legend">TYPE</legend>
+                        <div class="ps-2">
+                            <input type="checkbox" id="door1" name="door1" />
+                            <label for="door1">110 x 596 Door</label><br />
+                            <input type="checkbox" id="door2" name="door2" />
+                            <label for="door2">1245 x 296 Door</label><br />
+                            <input type="checkbox" id="door3" name="door3" />
+                            <label for="door3">1245 x 496 Door</label><br />
+                            <input type="checkbox" id="door4" name="door4" />
+                            <label for="door4">1245 x 596 Door</label><br />
+                            <input type="checkbox" id="door5" name="door5" />
+                            <label for="door5">140 x 496 Door</label><br />
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border border-dark border-1 rounded-1 p-2 mt-3">
+                        <legend class="float-none w-auto px-1 legend">ASSEMBLY</legend>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    FlatPack
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    Stock
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="border border-dark border-1 rounded-1 p-2 mt-3">
+                        <legend class="float-none w-auto px-1 legend">STYLE</legend>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    J-Pull
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    Slab Standard
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    Shaker
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    Slab
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    Square Door
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn w-100 rounded-0 px-2 py-1 bg-white sidebar-btn">
+                                    True Handlelss
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border border-dark border-1 rounded-1 p-2 mt-3">
+                        <legend class="float-none w-auto px-1 legend">COLOUR</legend>
+                        <div class="row g-1">
+                            <div class="col-6 d-flex position-relative align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    UltraMatt indigo Blue
+                                </button>
+                            </div>
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    UltraMatt Sage Green
+                                </button>
+                            </div>
+
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    SuperGloss White
+                                </button>
+                            </div>
+
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    SuperGloss Cashmere
+                                </button>
+                            </div>
+
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    SuperGloss Light Grey
+                                </button>
+                            </div>
+
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    SuperGloss Dust Grey
+                                </button>
+                            </div>
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    SuperGloss Graphite
+                                </button>
+                            </div>
+                            <div class="col-6 position-relative d-flex align-items-center justify-content-center">
+                                <div
+                                    class="colour-div position-absolute start-0 top-50 translate-middle-y ms-2 bg-danger">
+                                </div>
+                                <button type="button"
+                                    class="colour-btn bg-white btn w-100 rounded-0 sidebar-btn text-start">
+                                    UltraMatt White
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="row text-sm-center">
+                    @foreach ($products as $index => $product)
+                        <div class="col-lg-4 col-6 mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <!-- Button trigger modal -->
+                                    <a class="modal-icon z-3" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#productModal{{ $index }}">
+                                        <i class="ri-add-circle-line text-black fs-4"></i>
+                                    </a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="productModal{{ $index }}" tabindex="-1"
+                                        aria-labelledby="productModalLabel{{ $index }}" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-5 col-12">
+                                                                <img src="{{ asset('uploads/products/' . $product->image_path) }}"
+                                                                    class="img-fluid" />
+                                                            </div>
+                                                            <div class="col-lg-8 col-md-7 col-12 text-start">
+                                                                <h1 class="fs-5 fw-bold">
+                                                                    {{ $product->full_title }}
+                                                                </h1>
+                                                                <hr>
+                                                                <h6 class="fs-6 fw-bolder text-dark">Styling</h6>
+                                                                <ul>
+                                                                    <li>HEIGHT: 720mm</li>
+                                                                    <li>WIDTH: 1000mm</li>
+                                                                    <li>DEPTH: 570mm</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <figure>
+                                            <img class="product-image px-0"
+                                                src="{{ $product->image_path ? asset('uploads/products/' . $product->image_path) : asset('images/no-image-available.jpg') }}"
+                                                alt="Card image cap">
+                                        </figure>
+                                        <div class="">
+                                            <a href=""
+                                                class="text-center text-decoration-underline fs-5 fw-bold">
+                                                {{ $product->short_title }}
+                                            </a>
+                                            <p class="py-lg-3 py-2">
+                                                <small class="fw-bold text-center">{{ $product->dimensions }}</small>
+                                            </p>
+                                            <div class="container-fluid">
+                                                <div class="row justify-content-center product-counter">
+                                                    <input id="minus{{ $index }}"
+                                                        class="minus border bg-dark text-light p-0" type="button"
+                                                        value="-"
+                                                        onclick="decreaseQuantity('{{ $index }}')" />
+                                                    <input id="quantity{{ $index }}"
+                                                        class="quantity border border-black text-center"
+                                                        type="text" value="0" name="quantity" disabled />
+                                                    <input id="plus{{ $index }}"
+                                                        class="plus border bg-dark text-light p-0" type="button"
+                                                        value="+"
+                                                        onclick="increaseQuantity('{{ $index }}')" />
+                                                </div>
+                                            </div>
+                                            <p class="fs-5 fw-bold mt-lg-2">£{{ $product->price }}</p>
+                                            <div class="container-fluid">
+                                                @if ($product->style)
+                                                    <div class="row">
+                                                        <div class="col-4 p-0 d-md-flex d-none">
+                                                            <p
+                                                                class="category-text text-start text-uppercase m-0 pt-1">
+                                                                <small>Style</small>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-12 p-0 text-center">
+                                                            <p class="category-value fw-semibold py-1 mb-2">
+                                                                <small>{{ $product->style->name }}</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if ($product->colour)
+                                                    <div class="row">
+                                                        <div class="col-4 p-0 d-md-flex d-none">
+                                                            <p
+                                                                class="category-text text-start text-uppercase m-0 pt-1">
+                                                                <small>Color</small>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-12 p-0 text-center">
+                                                            <p class="category-value fw-semibold py-1 mb-2">
+                                                                <small>{{ $product->colour->trade_colour ? $product->colour->trade_colour : $product->colour->name }}</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                @if ($product->assembly)
+                                                    <div class="row">
+                                                        <div class="col-4 p-0 d-md-flex d-none">
+                                                            <p
+                                                                class="category-text text-start text-uppercase m-0 pt-1">
+                                                                <small>Assembly</small>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-12 p-0 text-center">
+                                                            <p class="category-value fw-semibold py-1 mb-2">
+                                                                <small>{{ $product->assembly->name }}</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div id="custom-pagination-container">
+                    {{ $products->links() }}
+                </div>
+            </div>
+        </div>
+    </section>
+</x-guest-layout>
